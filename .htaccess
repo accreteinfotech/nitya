@@ -1,0 +1,206 @@
+RewriteEngine On
+
+#Client Site URL
+RewriteRule ^Home/?$ index.php
+RewriteRule ^Home/([a-zA-Z0-9]+)?$ index.php?wid=$1
+RewriteRule ^About/?$ about.php
+RewriteRule ^Account/?$ my-account.php
+RewriteRule ^Product/?$ product.php
+RewriteRule ^All-Categories/?$ categories.php
+RewriteRule ^Blogs/?$ blog.php
+RewriteRule ^Our-Works/?$ our-works.php
+RewriteRule ^Our-Clients/?$ our-clients.php
+RewriteRule ^Contact-us/?$ contact.php
+RewriteRule ^Privacy-Policy/?$ privacy-policy.php
+RewriteRule ^Terms-And-Condition/?$ terms-and-condition.php
+RewriteRule ^Return-Policy/?$ return-policy.php
+RewriteRule ^Order-Tracking/?$ order-tracking.php
+RewriteRule ^Register/?$ register.php
+RewriteRule ^Login-Register/?$ login.php
+RewriteRule ^Logout/?$ logout.php
+RewriteRule ^Insert-Cart/?$ insert_cart.php
+RewriteRule ^Login-Code/?$ login_code.php
+RewriteRule ^Insert-User/?$ insert_user.php
+RewriteRule ^Cart/?$ cart.php
+RewriteRule ^Wishlist/?$ wishlist.php
+RewriteRule ^Update-Cart/?$ update_cart.php
+RewriteRule ^Insert-Checkout/?$ insert_checkout.php
+RewriteRule ^Insert-Order/?$ insert_order_item.php
+RewriteRule ^Checkout/?$ checkout.php
+RewriteRule ^Insert-Checkout/?$ insert_checkout.php
+RewriteRule ^Success/([a-zA-Z0-9]+)?$ send.php?sid=$1
+RewriteRule ^Cancel/([a-zA-Z0-9]+)?$ cancel.php?oid=$1
+RewriteRule ^Cancel$ cancel.php
+RewriteRule ^Product/([a-zA-Z0-9-_]+)?$ product.php?cid=$1
+RewriteRule ^Series/([a-zA-Z0-9-_]+)?$ series.php?cid=$1
+RewriteRule ^All-Products/([a-zA-Z0-9-_]+)?$ product.php?pid=$1
+RewriteRule ^Priority-Products/([a-zA-Z0-9-_]+)?$ product.php?bid=$1
+RewriteRule ^All-Products/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-_]+)?$ product.php?pid=$1&page=$2
+RewriteRule ^Product/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-_]+)?$ product.php?cid=$1&page=$2
+RewriteRule ^Priority-Products/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-_]+)?$ product.php?bid=$1&page=$2
+RewriteRule ^Login/([a-zA-Z0-9-_]+)/([a-zA-Z0-9-_]+)?$ login.php?pid=$1&pgid=$2
+RewriteRule ^Login/([a-zA-Z0-9-_]+)?$ login.php?cid=$1
+RewriteRule ^Product-Detail/([a-zA-Z0-9-_]+)?$ product-detail.php?pid=$1
+RewriteRule ^Work-Gallery/([a-zA-Z0-9-_]+)?$ work-gallery.php?wid=$1
+RewriteRule ^Blog/([a-zA-Z0-9-_]+)?$ blog-detail.php?bid=$1
+RewriteRule ^Remove-Cart/([a-zA-Z0-9]+)?$ remove_cart.php?cid=$1
+RewriteRule ^Insert-Wishlist/?$ insert_wishlist.php
+RewriteRule ^Remove-Wishlist/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)?$ remove_wishlist.php?cid=$1&pid=$2
+RewriteRule ^Remove-Wishlist/([a-zA-Z0-9]+)?$ remove_wishlist.php?cid=$1
+RewriteRule ^Media/?$ media.php
+RewriteRule ^Exchange-Policy/?$ exchange-policy.php
+RewriteRule ^Forgot-Password/?$ forget-password.php
+
+#Backyard URL
+RewriteRule ^backyard/Logout/?$ backyard/logout.php
+RewriteRule ^backyard/Admin-Home/?$ backyard/index.php
+RewriteRule ^backyard/dashboard/Dashboard/?$ backyard/dashboard/dashboard.php
+RewriteRule ^backyard/change_password/Change-Password/?$ backyard/change_password/change_password.php
+
+#order
+RewriteRule ^backyard/order/View-Order/?$ backyard/order/view_order.php
+RewriteRule ^backyard/order/Show-Order-Detail/([a-zA-Z0-9]+)?$ backyard/order/show_order.php?oid=$1
+
+#order
+RewriteRule ^backyard/quote/View-Quote/?$ backyard/quote/view_quote.php
+
+#Leads
+RewriteRule ^backyard/leads/Leads/?$ backyard/leads/view_leads.php
+
+#Product Category Links
+RewriteRule ^backyard/category/Add-Category/?$ backyard/category/add_category.php
+RewriteRule ^backyard/category/View-Category/?$ backyard/category/view_category.php
+RewriteRule ^backyard/category/Insert-Category/?$ backyard/category/insert_category.php
+RewriteRule ^backyard/category/Update-Category/?$ backyard/category/update_category.php
+RewriteRule ^backyard/category/Edit-Category/([a-zA-Z0-9]+)?$ backyard/category/edit_category.php?cid=$1
+RewriteRule ^backyard/category/Delete-Category/([a-zA-Z0-9]+)?$ backyard/category/delete_category.php?cid=$1
+
+#Work Links
+RewriteRule ^backyard/work/Add-Work/?$ backyard/work/add_work.php
+RewriteRule ^backyard/work/View-Work/?$ backyard/work/view_work.php
+RewriteRule ^backyard/work/Insert-Work/?$ backyard/work/insert_work.php
+RewriteRule ^backyard/work/Update-Work/?$ backyard/work/update_work.php
+RewriteRule ^backyard/work/Edit-Work/([a-zA-Z0-9]+)?$ backyard/work/edit_work.php?cid=$1
+RewriteRule ^backyard/work/Delete-Work/([a-zA-Z0-9]+)?$ backyard/work/delete_work.php?cid=$1
+
+#Product SEO Links
+RewriteRule ^backyard/seo/Add-Seo/?$ backyard/seo/add_seo.php
+RewriteRule ^backyard/seo/View-Category/?$ backyard/seo/view_category.php
+RewriteRule ^backyard/seo/Update-Seo/?$ backyard/seo/update_seo.php
+RewriteRule ^backyard/seo/View-Seo/?$ backyard/seo/view_seo.php
+RewriteRule ^backyard/seo/Edit-Seo/([a-zA-Z0-9]+)?$ backyard/seo/edit_seo.php?cid=$1
+
+RewriteRule ^backyard/seo/View-Product/?$ backyard/seo/view_product.php
+RewriteRule ^backyard/seo/Update-Product/?$ backyard/seo/update_product.php
+RewriteRule ^backyard/seo/Edit-Product/([a-zA-Z0-9]+)?$ backyard/seo/edit_product.php?cid=$1
+
+RewriteRule ^backyard/seo/View-Category/?$ backyard/seo/view_category.php
+RewriteRule ^backyard/seo/Update-Category/?$ backyard/seo/update_category.php
+RewriteRule ^backyard/seo/Edit-Category/([a-zA-Z0-9]+)?$ backyard/seo/edit_category.php?cid=$1
+
+RewriteRule ^backyard/seo/Google-Analytics/?$ backyard/seo/view_google.php
+RewriteRule ^backyard/seo/Facebook-Pixel/?$ backyard/seo/view_facebook.php
+RewriteRule ^backyard/seo/Tag-Manager/?$ backyard/seo/view_tag.php
+RewriteRule ^backyard/seo/Search-Consol/?$ backyard/seo/view_search.php
+
+
+RewriteRule ^backyard/seo/View-Product/?$ backyard/seo/view_product.php
+RewriteRule ^backyard/seo/Update-Product/?$ backyard/seo/update_product.php
+RewriteRule ^backyard/seo/Edit-Product/([a-zA-Z0-9]+)?$ backyard/seo/edit_product.php?cid=$1
+RewriteRule ^backyard/seo/Update-Product/?$ backyard/seo/update_product.php
+
+#Inventory Links
+RewriteRule ^backyard/inventory/Add-Inventory/?$ backyard/inventory/add_inventory.php
+RewriteRule ^backyard/inventory/View-Inventory/?$ backyard/inventory/view_inventory.php
+RewriteRule ^backyard/inventory/Insert-Inventory/?$ backyard/inventory/insert_inventory.php
+RewriteRule ^backyard/inventory/Update-Inventory/?$ backyard/inventory/update_inventory.php
+RewriteRule ^backyard/inventory/Edit-Inventory/([a-zA-Z0-9]+)?$ backyard/inventory/edit_inventory.php?cid=$1
+RewriteRule ^backyard/inventory/Delete-Inventory/([a-zA-Z0-9]+)?$ backyard/inventory/delete_inventory.php?cid=$1
+
+#Coupon Links
+RewriteRule ^backyard/coupon/Active/([a-zA-Z0-9]+)?$ backyard/coupon/active.php?pid=$1
+RewriteRule ^backyard/coupon/Inactive/([a-zA-Z0-9]+)?$ backyard/coupon/inactive.php?pid=$1
+RewriteRule ^backyard/coupon/Add-Coupon/?$ backyard/coupon/add_coupon.php
+RewriteRule ^backyard/coupon/View-Coupon/?$ backyard/coupon/view_coupon.php
+RewriteRule ^backyard/coupon/Insert-Coupon/?$ backyard/coupon/insert_coupon.php
+RewriteRule ^backyard/coupon/Update-Coupon/?$ backyard/coupon/update_coupon.php
+RewriteRule ^backyard/coupon/Edit-Coupon/([a-zA-Z0-9]+)?$ backyard/coupon/edit_coupon.php?cid=$1
+RewriteRule ^backyard/coupon/Delete-Coupon/([a-zA-Z0-9]+)?$ backyard/coupon/delete_coupon.php?cid=$1
+
+#Material Links
+RewriteRule ^backyard/material/Add-Material/?$ backyard/material/add_material.php
+RewriteRule ^backyard/material/View-Material/?$ backyard/material/view_material.php
+RewriteRule ^backyard/material/Insert-Material/?$ backyard/material/insert_material.php
+RewriteRule ^backyard/material/Update-Material/?$ backyard/material/update_material.php
+RewriteRule ^backyard/material/Edit-Material/([a-zA-Z0-9]+)?$ backyard/material/edit_material.php?cid=$1
+RewriteRule ^backyard/material/Delete-Material/([a-zA-Z0-9]+)?$ backyard/material/delete_material.php?cid=$1
+
+#Product Links
+RewriteRule ^backyard/product/Active/([a-zA-Z0-9]+)?$ backyard/product/active.php?pid=$1
+RewriteRule ^backyard/product/Inactive/([a-zA-Z0-9]+)?$ backyard/product/inactive.php?pid=$1
+RewriteRule ^backyard/product/Add-Product/?$ backyard/product/add_product.php
+RewriteRule ^backyard/product/View-Product/?$ backyard/product/view_product.php
+RewriteRule ^backyard/product/Insert-Product/?$ backyard/product/insert_product.php
+RewriteRule ^backyard/product/Update-Product/?$ backyard/product/update_product.php
+RewriteRule ^backyard/product/Edit-Product/([a-zA-Z0-9]+)?$ backyard/product/edit_product.php?cid=$1
+RewriteRule ^backyard/product/Delete-Product/([a-zA-Z0-9]+)?$ backyard/product/delete_product.php?cid=$1
+
+#Product Gallery Links
+RewriteRule ^backyard/product_gallery/Add-Product-Gallery/?$ backyard/product_gallery/add_product_gallery.php
+RewriteRule ^backyard/product_gallery/Insert-Product-Gallery/?$ backyard/product_gallery/insert_product_gallery.php
+RewriteRule ^backyard/product_gallery/View-Product/?$ backyard/product_gallery/view_product.php
+RewriteRule ^backyard/product_gallery/View-Product-Gallery/([a-zA-Z0-9]+)?$ backyard/product_gallery/view_product_gallery.php?pid=$1
+RewriteRule ^backyard/product_gallery/Delete-Product-Gallery/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ backyard/product_gallery/delete_product_gallery.php?cid=$1&aid=$2
+
+#Product Gallery Links
+RewriteRule ^backyard/work_gallery/Add-Work-Gallery/?$ backyard/work_gallery/add_work_gallery.php
+RewriteRule ^backyard/work_gallery/Insert-Work-Gallery/?$ backyard/work_gallery/insert_work_gallery.php
+RewriteRule ^backyard/work_gallery/View-Work/?$ backyard/work_gallery/view_work.php
+RewriteRule ^backyard/work_gallery/View-Work-Gallery/([a-zA-Z0-9]+)?$ backyard/work_gallery/view_work_gallery.php?pid=$1
+RewriteRule ^backyard/work_gallery/Delete-Work-Gallery/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ backyard/work_gallery/delete_work_gallery.php?cid=$1&aid=$2
+
+#Blog Links
+RewriteRule ^backyard/blogs/Add-Blog/?$ backyard/blogs/add_blogs.php
+RewriteRule ^backyard/blogs/Insert-Blog/?$ backyard/blogs/insert_blogs.php
+RewriteRule ^backyard/blogs/Update-Blog/?$ backyard/blogs/update_blogs.php
+RewriteRule ^backyard/blogs/View-Blogs/?$ backyard/blogs/view_blogs.php
+RewriteRule ^backyard/blogs/Edit-Blog/([a-zA-Z0-9]+)$ backyard/blogs/edit_blogs.php?cid=$1
+RewriteRule ^backyard/blogs/Delete-Blog/([a-zA-Z0-9]+)$ backyard/blogs/delete_blogs.php?cid=$1
+
+#Color Links
+RewriteRule ^backyard/color/Add-Color/?$ backyard/color/add_color.php
+RewriteRule ^backyard/color/Insert-Color/?$ backyard/color/insert_color.php
+RewriteRule ^backyard/color/Update-Color/?$ backyard/color/update_color.php
+RewriteRule ^backyard/color/View-Color/?$ backyard/color/view_color.php
+RewriteRule ^backyard/color/Edit-Color/([a-zA-Z0-9]+)$ backyard/color/edit_color.php?cid=$1
+RewriteRule ^backyard/color/Delete-Color/([a-zA-Z0-9]+)$ backyard/color/delete_color.php?cid=$1
+
+#Product Size Links
+RewriteRule ^backyard/product_size/Add-Product-Size/?$ backyard/product_size/add_product_size.php
+RewriteRule ^backyard/product_size/Insert-Product-Size/?$ backyard/product_size/insert_product_size.php
+RewriteRule ^backyard/product_size/Update-Product-Size/?$ backyard/product_size/update_product_size.php
+RewriteRule ^backyard/product_size/View-Product-Size/?$ backyard/product_size/view_product_size.php
+RewriteRule ^backyard/product_size/View-Size/?$ backyard/product_size/view_size.php
+RewriteRule ^backyard/product_size/Edit-Product-Size/([a-zA-Z0-9]+)$ backyard/product_size/edit_product_size.php?cid=$1
+RewriteRule ^backyard/product_size/Delete-Product-Size/([a-zA-Z0-9]+)$ backyard/product_size/delete_product_size.php?cid=$1
+
+#Product Color Links
+RewriteRule ^backyard/product_color/Add-Product-Color/?$ backyard/product_color/add_product_color.php
+RewriteRule ^backyard/product_color/Insert-Product-Color/?$ backyard/product_color/insert_product_color.php
+RewriteRule ^backyard/product_color/Update-Product-Color/?$ backyard/product_color/update_product_color.php
+RewriteRule ^backyard/product_color/View-Product-Color/?$ backyard/product_color/view_product_color.php
+RewriteRule ^backyard/product_color/View-Color/?$ backyard/product_color/view_color.php
+RewriteRule ^backyard/product_color/Edit-Product-Color/([a-zA-Z0-9]+)$ backyard/product_color/edit_product_color.php?cid=$1
+RewriteRule ^backyard/product_color/Delete-Product-Color/([a-zA-Z0-9]+)$ backyard/product_color/delete_product_color.php?cid=$1
+
+#Testimonials Links
+RewriteRule ^backyard/testimonials/Add-Testimonials/?$ backyard/testimonials/add_testimonials.php
+RewriteRule ^backyard/testimonials/View-Testimonials/?$ backyard/testimonials/view_testimonials.php
+RewriteRule ^backyard/testimonials/Insert-Testimonials/?$ backyard/testimonials/insert_testimonials.php
+RewriteRule ^backyard/testimonials/Update-Testimonials/?$ backyard/testimonials/update_testimonials.php
+RewriteRule ^backyard/testimonials/Edit-Testimonials/([a-zA-Z0-9]+)?$ backyard/testimonials/edit_testimonials.php?cid=$1
+RewriteRule ^backyard/testimonials/Delete-Testimonials/([a-zA-Z0-9]+)?$ backyard/testimonials/delete_testimonials.php?cid=$1
+
+#Custommers
+RewriteRule ^backyard/user/Users/?$ backyard/user/view_user.php
+RewriteRule ^backyard/user/Delete-Users/([a-zA-Z0-9]+)$ backyard/user/delete_user.php?cid=$1

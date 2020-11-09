@@ -1,0 +1,9 @@
+[14-Oct-2020 09:32:58 UTC] PHP Fatal error:  Uncaught Exception: Unknown column 'parent_category' in 'where clause' query: select * from category where category_delete=0 and parent_category!=0 in /home3/thehonvq/public_html/accreteit.com/wax-berry/backyard/include/MysqliDb.php:1926
+Stack trace:
+#0 /home3/thehonvq/public_html/accreteit.com/wax-berry/backyard/include/MysqliDb.php(516): MysqliDb->_prepareQuery()
+#1 /home3/thehonvq/public_html/accreteit.com/wax-berry/backyard/product/add_product.php(89): MysqliDb->rawQuery('select * from c...')
+#2 {main}
+  thrown in /home3/thehonvq/public_html/accreteit.com/wax-berry/backyard/include/MysqliDb.php on line 1926
+[14-Oct-2020 10:31:43 UTC] PHP Warning:  unlink(../images/product_gallery_large_image/): Is a directory in /home3/thehonvq/public_html/accreteit.com/wax-berry/backyard/product/delete_product.php on line 32
+[14-Oct-2020 10:31:43 UTC] PHP Warning:  unlink(../images/product_gallery_large_image/): Is a directory in /home3/thehonvq/public_html/accreteit.com/wax-berry/backyard/product/delete_product.php on line 32
+[14-Oct-2020 10:31:43 UTC] PHP Warning:  unlink(../images/product_gallery_large_image/): Is a directory in /home3/thehonvq/public_html/accreteit.com/wax-berry/backyard/product/delete_product.php on line 32

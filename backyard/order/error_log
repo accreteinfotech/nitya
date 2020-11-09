@@ -1,0 +1,2 @@
+[13-Oct-2020 21:43:14 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/thehonvq/public_html/accreteit.com/wax-berry/backyard/order/show_order.php on line 5
+[13-Oct-2020 21:43:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/thehonvq/public_html/accreteit.com/wax-berry/backyard/order/show_order.php:1) in /home3/thehonvq/public_html/accreteit.com/wax-berry/backyard/order/show_order.php on line 8
